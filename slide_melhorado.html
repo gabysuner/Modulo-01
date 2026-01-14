@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos Controlados - Módulo 01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f4c5c 0%, #1a6b7d 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .slide-container {
+            background: white;
+            width: 100%;
+            max-width: 1400px;
+            min-height: 800px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0d3d4d 0%, #165869 100%);
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #0d3d4d;
+        }
+
+        .module-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 50px;
+        }
+
+        .left-section h1 {
+            font-size: 48px;
+            color: #0d3d4d;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #4a9eff 0%, #2d7dd2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(74, 158, 255, 0.3);
+        }
+
+        .highlight-box-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .highlight-box p {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .highlight-box strong {
+            font-weight: 700;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .alert-box-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .alert-box p {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .right-section h2 {
+            font-size: 32px;
+            color: #0d3d4d;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #4a9eff;
+        }
+
+        .feature {
+            margin-bottom: 30px;
+        }
+
+        .feature h3 {
+            color: #2d7dd2;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #4a9eff 0%, #2d7dd2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 15px;
+            padding-left: 38px;
+        }
+
+        .footer {
+            background: #f5f7fa;
+            padding: 20px 50px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1024px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">✈️</div>
+                <span>LÍDER <em style="font-weight: 300;">Aviação</em></span>
+            </div>
+            <div class="module-tag">MÓDULO 01</div>
+        </div>
+
+        <div class="content">
+            <div class="left-section">
+                <h1>Documentos Controlados</h1>
+                
+                <p class="description">
+                    Um Documento Controlado é um documento cuja emissão, revisão e distribuição são gerenciadas pelo Sistema de Gestão da Qualidade (SGQ). Essa sistemática garante que todos na organização utilizem a mesma versão vigente, eliminando divergências e assegurando conformidade regulatória.
+                </p>
+
+                <div class="highlight-box">
+                    <div class="highlight-box-header">
+                        <div class="icon">📋</div>
+                        <strong>Procedimento Operacional Padrão</strong>
+                    </div>
+                    <p>
+                        Na LÍDER, essa gestão está definida no <strong>POP LA-155 – Documentar Sistema de Gestão</strong>, em atendimento ao <strong>RBAC nº 145.211(c)(3)</strong>.
+                    </p>
+                </div>
+
+                <div class="alert-box">
+                    <div class="alert-box-header">
+                        <div class="icon">⚠️</div>
+                        <strong>Importante: Controle de Qualidade</strong>
+                    </div>
+                    <p>
+                        O controle documental é <strong>essencial para a aeronavegabilidade</strong> e para a manutenção das certificações da empresa perante às autoridades. A utilização de versões obsoletas ou não controladas pode gerar <strong>não conformidades regulatórias, riscos de segurança</strong>, e comprometer o compliance do sistema.
+                    </p>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <h2>Características</h2>
+                
+                <p class="description" style="margin-bottom: 30px;">
+                    Documentos controlados possuem características específicas para garantir rastreabilidade, padronização e accountability:
+                </p>
+
+                <div class="feature">
+                    <h3>
+                        <span class="feature-icon">🌐</span>
+                        Fonte Única
+                    </h3>
+                    <p>A intranet corporativa do SGQ é a única fonte válida para consulta de versões vigentes.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>
+                        <span class="feature-icon">🔢</span>
+                        Identificação de Revisão
+                    </h3>
+                    <p>A data e o número da revisão ficam indicados no rodapé, permitindo rastrear quando e o que foi atualizado.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>
+                        <span class="feature-icon">📊</span>
+                        Barra de Revisão
+                    </h3>
+                    <p>Alterações em relação à versão anterior são destacadas visualmente por uma barra vertical preta na margem esquerda da página.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>
+                        <span class="feature-icon">✓</span>
+                        Aprovação Eletrônica
+                    </h3>
+                    <p>A revisão é aprovada formalmente por meio de fluxo eletrônico, tipicamente pelo Responsável Técnico ou pelo Líder de Engenharia e Qualidade, assegurando que cada mudança possua responsável e justificativa.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>
+                        <span class="feature-icon">📄</span>
+                        Cópias Físicas
+                    </h3>
+                    <p>Sempre não controladas. Quando impressas, devem ser identificadas com o texto "cópia não controlada" e com a data da impressão. Após o uso, devem ser descartadas para evitar que versões obsoletas permaneçam em circulação.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Manuais e Políticas | Sistema de Gestão da Qualidade
+        </div>
+    </div>
+</body>
+</html>
